@@ -17,7 +17,7 @@ class GetData{
            httpSpec = http;
      }
      
-//getters   
+//GET DATA HTTP 
     function getToken() {
     	System.println("Querying Token...");
     	urlParams = {"function" => ApiFunctions.getToken, 
@@ -26,7 +26,6 @@ class GetData{
     	             "realm" => ApiFunctions.realm};
     	urlMethod = method(:receiveToken);
     	httpSpec.HTTP_RESPONSE_CONTENT_TYPE_URL_ENCODED(urlParams, urlMethod);
-    	//Ui.requestUpdate();
     }
         
     function getAccountState() {
@@ -34,7 +33,6 @@ class GetData{
     	             "auth_token" => myapp.getProperty("apiToken")};
     	urlMethod = method(:receiveAccountState);
     	httpSpec.HTTP_REQUEST_METHOD_GET(urlParams, urlMethod);
-    	//Ui.requestUpdate();
      }
      
     function getAutoPaySettings() {

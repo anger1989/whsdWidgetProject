@@ -2,6 +2,7 @@ using Toybox.Application;
 using Toybox.System as Sys;
 
 class app extends Application.AppBase {
+    hidden var properties = new Properties();
     hidden var httpSpec = new HttpSpec();
     hidden var getData = new GetData(httpSpec);   
     hidden var confLoad = new ConfModule();
@@ -26,7 +27,7 @@ class app extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() {
-        return [new view(getData), new MainDelegate(getData) ];
+        return [new view(getData, properties), new MainDelegate(getData, properties) ];
     }
 
 }

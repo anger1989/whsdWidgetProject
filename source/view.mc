@@ -6,12 +6,14 @@ using Toybox.Graphics;
 using ParamModule;
 
 class view extends Ui.View {
-
+    
+    hidden var _properties;
     hidden var _getData;
     hidden var myapp = App.getApp();
     
  
-    function initialize(getData) { 
+    function initialize(getData, properties) { 
+        _properties = properties;
         _getData = getData;
         System.println("Initialize");
         System.println("Load login, pass...");
