@@ -5,59 +5,162 @@ using Toybox.Lang as Lang;
 
 using ParamModule;
 using ApiFunctions;
+using UrlDictionary;
 
 class GetData{
-       
     hidden var myapp = App.getApp();
+       
     hidden var urlParams = "";
     hidden var urlMethod = "";
-    hidden var httpSpec;
+    hidden var _httpSpec;
+    hidden var _properties;
     
-     function initialize(http) {
-           httpSpec = http;
+     function initialize(httpSpec, properties) {
+           _httpSpec = httpSpec;
+           _properties = properties;
      }
      
 //GET DATA HTTP 
+
+   // function for get API token
     function getToken() {
     	System.println("Querying Token...");
     	urlParams = {"function" => ApiFunctions.getToken, 
-    	             "user" => httpSpec.apiLogin, 
-    	             "pass" => httpSpec.apiPass, 
-    	             "realm" => ApiFunctions.realm};
+    	             "user" => _httpSpec.apiLogin, 
+    	             "pass" => _httpSpec.apiPass, 
+    	             "realm" => UrlDictionary.realm};
+    	System.println(urlParams);
     	urlMethod = method(:receiveToken);
-    	httpSpec.HTTP_RESPONSE_CONTENT_TYPE_URL_ENCODED(urlParams, urlMethod);
+    	_httpSpec.HTTP_RESPONSE_CONTENT_TYPE_URL_ENCODED(urlParams, urlMethod);
+    	System.println("check getToken");
+    	
     }
-        
-    function getAccountState() {
+    
+    function receiveToken(responseCode, data) {
+        System.println("check receiveToken");
+        _httpSpec.httpCode = responseCode;
+        if (responseCode == 200) {
+           data = data["return"];
+           System.println(data);
+           myapp.setProperty("apiToken", data);
+           System.println("Token"+myapp.getProperty("apiToken"));
+           Ui.requestUpdate();  
+        }
+        else
+        {
+           Ui.requestUpdate();
+           System.println("Not Response" +responseCode);
+        }
+    }
+    
+   
+   //function for get Account data     
+    function getAccountState(apiToken) {
+       System.println("GetAccountState called");
     	urlParams = {"function" => ApiFunctions.getAccountState, 
-    	             "auth_token" => myapp.getProperty("apiToken")};
+    	             "auth_token" => apiToken};     
     	urlMethod = method(:receiveAccountState);
-    	httpSpec.HTTP_REQUEST_METHOD_GET(urlParams, urlMethod);
+    	_httpSpec.HTTP_REQUEST_METHOD_GET(urlParams, urlMethod);
+    	System.println("check getAccountState");
+    	
      }
      
-    function getAutoPaySettings() {
+    function receiveAccountState(responseCode, data) {
+       System.println("check receiveAccountState");
+      
+       _httpSpec.httpCode = responseCode;
+       if (responseCode == 200) {
+          data = data["return"];
+          System.println(data);
+          _properties.setBalance(data[0]["remainder"]);
+          _properties.setContractNum(data[0]["contract_num"]);
+          _properties.setStatus(data[0]["status"]);
+          System.println("Balance"+_properties.balance);
+          Ui.requestUpdate();
+       }
+       else
+       {
+           Ui.requestUpdate();
+           System.println("Not Response");
+       }
+   }
+   
+   
+  //function for get Auto Pay Settings   
+    function getAutoPaySettings(apiToken) {
         urlParams = {"function" => ApiFunctions.getAutoPaySettings, 
-    	             "auth_token" => myapp.getProperty("apiToken")};
+    	             "auth_token" => apiToken};
     	urlMethod = method(:receiveAutoPaySettings);
-    	httpSpec.HTTP_REQUEST_METHOD_GET(urlParams, urlMethod);
+    	_httpSpec.HTTP_REQUEST_METHOD_GET(urlParams, urlMethod);
+    }
+   
+   function receiveAutoPaySettings(responseCode, data) {
+       _httpSpec.httpCode = responseCode;
+       if (responseCode == 200) {
+          data = data["return"];
+          System.println(data);
+          _properties.setCardType(data["p_base_card_type"]);
+          _properties.setBaseCard(data["p_base_card"]);
+          _properties.setAutoPayAmount(data["p_auto_pay_amount"]);
+          _properties.setAutoPayBalanceThreshold(data["p_auto_pay_balance_threshold"]);
+          _properties.setAutoPayMaxAmountMonth(data["p_auto_pay_max_amount_month"]);
+          Ui.requestUpdate();
+       }
+       else
+       {
+           Ui.requestUpdate();
+           System.println("Not Response");
+       }
     }
     
-    function getAccountInfo() {
+   //function for get account info
+    function getAccountInfo(apiToken) {
         urlParams = {"function" => ApiFunctions.getAccountInfo, 
-    	             "auth_token" => myapp.getProperty("apiToken")};
+    	             "auth_token" => apiToken};
     	urlMethod = method(:receiveAccountInfo);
-    	httpSpec.HTTP_REQUEST_METHOD_GET(urlParams, urlMethod);
+    	_httpSpec.HTTP_REQUEST_METHOD_GET(urlParams, urlMethod);
     }
     
-    function getCardQueryParams() {
-       System.println(myapp.getProperty("apiToken"));
-       System.println(myapp.getProperty("linkedPhoneNumber"));
+    function receiveAccountInfo(responseCode, data) {
+       _httpSpec.httpCode = responseCode;
+       if (responseCode == 200) {
+          data = data["return"];
+          _properties.setLinkedPhoneNumber(data[0]["linked_phone_number"]);
+          System.println(data[0]["linked_phone_number"]);
+          Ui.requestUpdate();
+        }
+        else
+       {
+           Ui.requestUpdate();
+           System.println("Not Response");
+       }
+    }
+    
+  //function for get signature  
+    function getCardQueryParams(apiToken) {
+     //  System.println(myapp.getProperty("apiToken"));
+     //  System.println(myapp.getProperty("linkedPhoneNumber"));
        
        urlParams = {"function" => ApiFunctions.getCardQueryParams, 
-    	             "auth_token" => myapp.getProperty("apiToken"),
-    	             "p_phone_number" => myapp.getProperty("linkedPhoneNumber")};
+    	             "auth_token" => apiToken,
+    	             "p_phone_number" => _properties.cardQueryParams};
        urlMethod = method(:receiveCardQueryParams);
-       httpSpec.HTTP_REQUEST_METHOD_GET(urlParams, urlMethod);
+       _httpSpec.HTTP_REQUEST_METHOD_GET(urlParams, urlMethod);
+    }
+    
+   function receiveCardQueryParams(responseCode, data) {
+      _httpSpec.httpCode = responseCode;
+      System.println(responseCode);
+       if (responseCode == 200) {
+         data = data["return"];        
+         _properties.setCardQueryParams(data);
+         Ui.requestUpdate();
+        }
+        else
+       {
+           Ui.requestUpdate();
+           System.println("Not Response");
+       }
     }
     
 /* Get for pays */
@@ -79,11 +182,11 @@ class GetData{
     	             "BaseFakeAuthPaymentForm[customerContact]" => "",
     	             "BaseFakeAuthPaymentForm[offer]" => "1"};
        urlMethod = method(:receiveReplenish);
-       httpSpec.HTTP_REQUEST_METHOD_POST(urlParams, urlMethod, url);
+       _httpSpec.HTTP_REQUEST_METHOD_POST(urlParams, urlMethod, url);
     }
     
     function receiveReplenish(responseCode, data) {
-       httpSpec.httpCode = responseCode;
+       _httpSpec.httpCode = responseCode;
         if (responseCode == 200) {
            data = data;
            System.println(data);
@@ -99,12 +202,12 @@ class GetData{
 
    
 /*-----------------------------*/    
-    
-//setters
+   
+/*setters
    function setAutoPaySettings() {
                       /*  p_auto_pay_amount: t,
                         p_auto_pay_balance_threshold: n,
-                        p_auto_pay_max_amount_month: o */
+                        p_auto_pay_max_amount_month: o 
         var threshold = myapp.getProperty("balance").toNumber() + 1;                
         urlParams = {"function" => ApiFunctions.setAutoPaySettings, 
     	              "auth_token" => myapp.getProperty("apiToken"),
@@ -118,54 +221,8 @@ class GetData{
 
 
 //receivers 
-    function receiveToken(responseCode, data) {
-       httpSpec.httpCode = responseCode;
-       if (responseCode == 200) {
-           data = data["return"];
-           myapp.setProperty("apiToken", data);
-       }
-       else
-       {
-           Ui.requestUpdate();
-           System.println("Not Response" +responseCode);
-       }
-       }
+   
 
-    function receiveAccountState(responseCode, data) {
-       httpSpec.httpCode = responseCode;
-       if (responseCode == 200) {
-          data = data["return"];
-          System.println(data);
-          myapp.setProperty("balance", data[0]["remainder"]);
-          myapp.setProperty("contractNum", data[0]["contract_num"]);
-          myapp.setProperty("status", data[0]["status"]);
-          Ui.requestUpdate();
-       }
-       else
-       {
-           Ui.requestUpdate();
-           System.println("Not Response");
-       }
-   }
-    
-   function receiveAutoPaySettings(responseCode, data) {
-       httpSpec.httpCode = responseCode;
-       if (responseCode == 200) {
-          data = data["return"];
-          System.println(data);
-          myapp.setProperty("cardType", data["p_base_card_type"]);
-          myapp.setProperty("baseCard", data["p_base_card"]);
-          myapp.setProperty("autoPayAmount", data["p_auto_pay_amount"]);
-          myapp.setProperty("autoPayBalanceThreshold", data["p_auto_pay_balance_threshold"]);
-          myapp.setProperty("autoPayMaxAmountMonth", data["p_auto_pay_max_amount_month"]);
-          Ui.requestUpdate();
-       }
-       else
-       {
-           Ui.requestUpdate();
-           System.println("Not Response");
-       }
-    }
        
     function receiveSetAutoPaySettings(responseCode, data) {
        httpSpec.httpCode = responseCode;
@@ -179,36 +236,7 @@ class GetData{
        }
     
     }   
-    
-    function receiveAccountInfo(responseCode, data) {
-       httpSpec.httpCode = responseCode;
-       if (responseCode == 200) {
-          data = data["return"];
-          myapp.setProperty("linkedPhoneNumber", data[0]["linked_phone_number"]);
-          System.println(data[0]["linked_phone_number"]);
-          Ui.requestUpdate();
-        }
-        else
-       {
-           Ui.requestUpdate();
-           System.println("Not Response");
-       }
-    }
-    
-    function receiveCardQueryParams(responseCode, data) {
-      httpSpec.httpCode = responseCode;
-      System.println(responseCode);
-       if (responseCode == 200) {
-         data = data["return"];
-         System.println("Check");         
-         myapp.setProperty("cardQueryParams", data);
-         Ui.requestUpdate();
-        }
-        else
-       {
-           Ui.requestUpdate();
-           System.println("Not Response");
-       }
-    }
+ */   
+ 
    
 }

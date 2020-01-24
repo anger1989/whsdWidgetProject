@@ -6,10 +6,11 @@ using ParamModule;
 
 class AutoPayment extends Ui.View {
     hidden var myapp = App.getApp();
-      
+    hidden var _properties;
     
-    function initialize() { 
+    function initialize(properties) { 
         System.println("Payment initialize");
+        _properties = properties;
         Ui.View.initialize(); 
     }
     
@@ -36,9 +37,9 @@ class AutoPayment extends Ui.View {
         dc.clear();
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-        dc.drawText(dc.getWidth()/2, dc.getHeight()/3.8, Graphics.FONT_SYSTEM_MEDIUM, ParamModule.titleCard+": "+myapp.getProperty("baseCard") , Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawText(dc.getWidth()/3, dc.getHeight()/2.5, Graphics.FONT_SYSTEM_MEDIUM, ParamModule.titleAutoPayAmount+": "+myapp.getProperty("autoPayAmount") , Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawText(dc.getWidth()/3, dc.getHeight()/1.8, Graphics.FONT_SYSTEM_MEDIUM, ParamModule.titleAutoPayThreshold+": "+myapp.getProperty("autoPayBalanceThreshold") , Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(dc.getWidth()/2, dc.getHeight()/3.8, Graphics.FONT_SYSTEM_MEDIUM, ParamModule.titleCard+": "+_properties.baseCard , Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(dc.getWidth()/3, dc.getHeight()/2.5, Graphics.FONT_SYSTEM_MEDIUM, ParamModule.titleAutoPayAmount+": "+_properties.autoPayAmount , Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(dc.getWidth()/3, dc.getHeight()/1.8, Graphics.FONT_SYSTEM_MEDIUM, ParamModule.titleAutoPayThreshold+": "+_properties.autoPayBalanceThreshold , Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
 }

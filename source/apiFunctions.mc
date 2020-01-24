@@ -1,10 +1,4 @@
 module ApiFunctions {
-       const apiUrl = "https://mcabinet.nch-spb.com/onyma/system/api/json";
-       const realm = "WHSD";
-       const autoPayUrl = "https://mpaymentsso.nch-spb.com/to-replenish?";
-       const getBindCardUrl = "https://mpaymentsso.nch-spb.com/bind/start?";
-       const getManageCardUrl = "https://mpaymentsso.nch-spb.com/to-manage?";
-       
        // POST. Get token function. params: user, pass, realm
        const getToken = "open_session";  //POST
        // GET. Get contract function. params: auth_token

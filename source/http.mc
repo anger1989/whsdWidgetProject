@@ -15,9 +15,9 @@ class HttpSpec {
              }
              
    function HTTP_RESPONSE_CONTENT_TYPE_URL_ENCODED(params, method) {
-         urlOptions = { "Content-Type" => Comm.HTTP_RESPONSE_CONTENT_TYPE_URL_ENCODED, 
+         urlOptions = {   "Content-Type" => Comm.HTTP_RESPONSE_CONTENT_TYPE_URL_ENCODED, 
     	                  "User-Agent" => apiUserAgent };
-         getHttpRequest(apiUrl, params, urlOptions, method);         
+         getHttpRequest(apiUrl, params, urlOptions, method);  
    }
    
    function HTTP_REQUEST_METHOD_GET(params, method) {
@@ -28,7 +28,7 @@ class HttpSpec {
    
    function HTTP_REQUEST_METHOD_POST(params, method, url) {
          urlOptions = {:method => 3, 
-                       "Content-Type" => Comm.HTTP_REQUEST_METHOD_GET, 
+                       "Content-Type" => Comm.HTTP_REQUEST_METHOD_POST, 
     	               "User-Agent" => apiUserAgent};
          getHttpRequest(url, params, urlOptions, method);  
    }
