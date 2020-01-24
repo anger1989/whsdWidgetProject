@@ -1,0 +1,8 @@
+version 0.0.2.0
+---Add Account Info
+---Add Autopay Info
+
+version 0.0.1.0
+---Add new modules
+---Add new api functions
+---Add new config. Critical balance parameter.

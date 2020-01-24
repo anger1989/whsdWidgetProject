@@ -1,107 +1,639 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <debugInfo>
 <pcToLineNum>
-<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectApp.mc" id="3" lineNum="5" pc="268435456" symbol="initialize"/>
-<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectApp.mc" id="3" lineNum="6" pc="268435460" symbol="initialize"/>
-<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectApp.mc" id="4" lineNum="10" pc="268435479" symbol="onStart"/>
-<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectApp.mc" id="5" lineNum="14" pc="268435484" symbol="onStop"/>
-<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectApp.mc" id="6" lineNum="18" pc="268435489" symbol="getInitialView"/>
-<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectApp.mc" id="6" lineNum="19" pc="268435493" symbol="getInitialView"/>
-<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectView.mc" id="8" lineNum="5" pc="268435531" symbol="initialize"/>
-<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectView.mc" id="8" lineNum="6" pc="268435535" symbol="initialize"/>
-<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectView.mc" id="9" lineNum="10" pc="268435554" symbol="onLayout"/>
-<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectView.mc" id="9" lineNum="11" pc="268435558" symbol="onLayout"/>
-<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectView.mc" id="10" lineNum="17" pc="268435596" symbol="onShow"/>
-<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectView.mc" id="11" lineNum="21" pc="268435601" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectView.mc" id="11" lineNum="23" pc="268435605" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectView.mc" id="12" lineNum="29" pc="268435626" symbol="onHide"/>
-<entry filename="Rez" id="18" lineNum="16" pc="268435631" symbol="MainLayout"/>
-<entry filename="Rez" id="18" lineNum="19" pc="268435643" symbol="MainLayout"/>
-<entry filename="Rez" id="18" lineNum="20" pc="268435762" symbol="MainLayout"/>
-<entry filename="Rez" id="18" lineNum="22" pc="268435826" symbol="MainLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\confModule.mc" id="3" lineNum="11" pc="268435456" symbol="loadParamData"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\confModule.mc" id="3" lineNum="12" pc="268435460" symbol="loadParamData"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\confModule.mc" id="3" lineNum="13" pc="268435494" symbol="loadParamData"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\confModule.mc" id="3" lineNum="14" pc="268435528" symbol="loadParamData"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\http.mc" id="5" lineNum="12" pc="268435581" symbol="getHttpRequest"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\http.mc" id="5" lineNum="13" pc="268435585" symbol="getHttpRequest"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\http.mc" id="5" lineNum="14" pc="268435609" symbol="getHttpRequest"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\http.mc" id="6" lineNum="17" pc="268435623" symbol="HTTP_RESPONSE_CONTENT_TYPE_URL_ENCODED"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\http.mc" id="6" lineNum="18" pc="268435627" symbol="HTTP_RESPONSE_CONTENT_TYPE_URL_ENCODED"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\http.mc" id="6" lineNum="20" pc="268435677" symbol="HTTP_RESPONSE_CONTENT_TYPE_URL_ENCODED"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\http.mc" id="7" lineNum="23" pc="268435710" symbol="HTTP_REQUEST_METHOD_GET"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\http.mc" id="7" lineNum="24" pc="268435714" symbol="HTTP_REQUEST_METHOD_GET"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\http.mc" id="7" lineNum="26" pc="268435764" symbol="HTTP_REQUEST_METHOD_GET"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\http.mc" id="8" lineNum="29" pc="268435797" symbol="HTTP_REQUEST_METHOD_POST"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\http.mc" id="8" lineNum="30" pc="268435801" symbol="HTTP_REQUEST_METHOD_POST"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\http.mc" id="8" lineNum="33" pc="268435864" symbol="HTTP_REQUEST_METHOD_POST"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\app.mc" id="11" lineNum="10" pc="268435897" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\app.mc" id="11" lineNum="11" pc="268435901" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\app.mc" id="11" lineNum="12" pc="268435919" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\app.mc" id="11" lineNum="13" pc="268435947" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\app.mc" id="11" lineNum="14" pc="268435965" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\app.mc" id="11" lineNum="15" pc="268435993" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\app.mc" id="12" lineNum="19" pc="268436022" symbol="onStart"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\app.mc" id="13" lineNum="24" pc="268436027" symbol="onStop"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\app.mc" id="14" lineNum="28" pc="268436032" symbol="getInitialView"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\app.mc" id="14" lineNum="29" pc="268436036" symbol="getInitialView"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="17" lineNum="14" pc="268436120" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="17" lineNum="15" pc="268436124" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="17" lineNum="16" pc="268436134" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="17" lineNum="17" pc="268436157" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="17" lineNum="18" pc="268436180" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="18" lineNum="22" pc="268436203" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="18" lineNum="23" pc="268436207" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="18" lineNum="24" pc="268436244" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="18" lineNum="25" pc="268436267" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="18" lineNum="26" pc="268436285" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="18" lineNum="27" pc="268436312" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="18" lineNum="29" pc="268436330" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="18" lineNum="33" pc="268436351" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="18" lineNum="34" pc="268436372" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="18" lineNum="35" pc="268436408" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="18" lineNum="36" pc="268436420" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="18" lineNum="37" pc="268436456" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="18" lineNum="38" pc="268436480" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="19" lineNum="46" pc="268436579" symbol="onShow"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="19" lineNum="47" pc="268436583" symbol="onShow"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="20" lineNum="51" pc="268436607" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="20" lineNum="52" pc="268436611" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="20" lineNum="53" pc="268436647" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="20" lineNum="54" pc="268436659" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="20" lineNum="55" pc="268436695" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="20" lineNum="56" pc="268436731" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="20" lineNum="57" pc="268436826" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="20" lineNum="59" pc="268436883" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="20" lineNum="60" pc="268436919" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="20" lineNum="65" pc="268437017" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="20" lineNum="68" pc="268437053" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="21" lineNum="71" pc="268437159" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="21" lineNum="73" pc="268437163" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="21" lineNum="74" pc="268437220" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="21" lineNum="75" pc="268437241" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="21" lineNum="76" pc="268437277" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="21" lineNum="77" pc="268437289" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="21" lineNum="78" pc="268437325" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="21" lineNum="79" pc="268437349" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="21" lineNum="81" pc="268437447" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="21" lineNum="83" pc="268437451" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="21" lineNum="84" pc="268437463" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="22" lineNum="90" pc="268437478" symbol="onHide"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\view.mc" id="22" lineNum="91" pc="268437482" symbol="onHide"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="24" lineNum="11" pc="268437499" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="24" lineNum="12" pc="268437503" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="24" lineNum="13" pc="268437526" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="25" lineNum="16" pc="268437549" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="25" lineNum="17" pc="268437553" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="25" lineNum="18" pc="268437590" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="26" lineNum="21" pc="268437614" symbol="onShow"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="26" lineNum="22" pc="268437618" symbol="onShow"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="27" lineNum="25" pc="268437642" symbol="onHide"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="27" lineNum="26" pc="268437646" symbol="onHide"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="28" lineNum="29" pc="268437663" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="28" lineNum="30" pc="268437667" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="28" lineNum="31" pc="268437679" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="29" lineNum="34" pc="268437694" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="29" lineNum="35" pc="268437698" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="29" lineNum="36" pc="268437738" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="29" lineNum="37" pc="268437750" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="29" lineNum="38" pc="268437790" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="29" lineNum="39" pc="268437830" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="29" lineNum="40" pc="268437960" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\autoPayment.mc" id="29" lineNum="41" pc="268438090" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="31" lineNum="11" pc="268438221" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="31" lineNum="12" pc="268438225" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="31" lineNum="13" pc="268438248" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="32" lineNum="16" pc="268438271" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="32" lineNum="17" pc="268438275" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="32" lineNum="18" pc="268438312" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="33" lineNum="21" pc="268438336" symbol="onShow"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="33" lineNum="22" pc="268438340" symbol="onShow"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="34" lineNum="25" pc="268438364" symbol="onHide"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="34" lineNum="26" pc="268438368" symbol="onHide"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="35" lineNum="29" pc="268438385" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="35" lineNum="30" pc="268438389" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="35" lineNum="31" pc="268438401" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="36" lineNum="34" pc="268438416" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="36" lineNum="35" pc="268438420" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="36" lineNum="36" pc="268438460" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="36" lineNum="37" pc="268438472" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="36" lineNum="38" pc="268438512" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="36" lineNum="39" pc="268438552" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="36" lineNum="40" pc="268438653" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="36" lineNum="41" pc="268438693" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="36" lineNum="42" pc="268438804" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="36" lineNum="43" pc="268438844" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="36" lineNum="44" pc="268438945" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\transponderInfo.mc" id="36" lineNum="45" pc="268438985" symbol="renderDisplay"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="39" lineNum="13" pc="268439097" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="39" lineNum="14" pc="268439101" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="39" lineNum="15" pc="268439123" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="40" lineNum="18" pc="268439134" symbol="onSelect"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="40" lineNum="19" pc="268439138" symbol="onSelect"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="40" lineNum="20" pc="268439166" symbol="onSelect"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="40" lineNum="21" pc="268439166" symbol="onSelect"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="40" lineNum="22" pc="268439183" symbol="onSelect"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="40" lineNum="23" pc="268439212" symbol="onSelect"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="40" lineNum="24" pc="268439241" symbol="onSelect"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="40" lineNum="25" pc="268439270" symbol="onSelect"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="40" lineNum="26" pc="268439302" symbol="onSelect"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="40" lineNum="27" pc="268439338" symbol="onSelect"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="42" lineNum="35" pc="268439342" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="42" lineNum="36" pc="268439346" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="42" lineNum="37" pc="268439364" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="43" lineNum="41" pc="268439375" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="43" lineNum="42" pc="268439379" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="43" lineNum="43" pc="268439403" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="43" lineNum="44" pc="268439427" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="43" lineNum="45" pc="268439451" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="43" lineNum="46" pc="268439462" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="43" lineNum="47" pc="268439497" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="43" lineNum="48" pc="268439508" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="43" lineNum="50" pc="268439543" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="43" lineNum="51" pc="268439554" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="43" lineNum="52" pc="268439578" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="43" lineNum="53" pc="268439612" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="43" lineNum="54" pc="268439630" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="43" lineNum="55" pc="268439650" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="43" lineNum="56" pc="268439690" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="45" lineNum="64" pc="268439727" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\viewInpuDelegate.mc" id="45" lineNum="65" pc="268439731" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="47" lineNum="16" pc="268439754" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="47" lineNum="17" pc="268439758" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="48" lineNum="21" pc="268439769" symbol="getToken"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="48" lineNum="22" pc="268439773" symbol="getToken"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="48" lineNum="23" pc="268439796" symbol="getToken"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="48" lineNum="27" pc="268439894" symbol="getToken"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="48" lineNum="28" pc="268439918" symbol="getToken"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="49" lineNum="32" pc="268439953" symbol="getAccountState"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="49" lineNum="33" pc="268439957" symbol="getAccountState"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="49" lineNum="35" pc="268440021" symbol="getAccountState"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="49" lineNum="36" pc="268440045" symbol="getAccountState"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="50" lineNum="40" pc="268440080" symbol="getAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="50" lineNum="41" pc="268440084" symbol="getAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="50" lineNum="43" pc="268440148" symbol="getAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="50" lineNum="44" pc="268440172" symbol="getAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="51" lineNum="47" pc="268440207" symbol="getAccountInfo"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="51" lineNum="48" pc="268440211" symbol="getAccountInfo"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="51" lineNum="50" pc="268440275" symbol="getAccountInfo"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="51" lineNum="51" pc="268440299" symbol="getAccountInfo"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="52" lineNum="54" pc="268440334" symbol="getCardQueryParams"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="52" lineNum="55" pc="268440338" symbol="getCardQueryParams"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="52" lineNum="56" pc="268440378" symbol="getCardQueryParams"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="52" lineNum="58" pc="268440418" symbol="getCardQueryParams"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="52" lineNum="61" pc="268440512" symbol="getCardQueryParams"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="52" lineNum="62" pc="268440536" symbol="getCardQueryParams"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="53" lineNum="66" pc="268440571" symbol="postReplenish1"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="53" lineNum="67" pc="268440575" symbol="postReplenish1"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="53" lineNum="68" pc="268440595" symbol="postReplenish1"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="53" lineNum="83" pc="268440804" symbol="postReplenish1"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="53" lineNum="84" pc="268440828" symbol="postReplenish1"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="54" lineNum="87" pc="268440865" symbol="receiveReplenish"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="54" lineNum="88" pc="268440869" symbol="receiveReplenish"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="54" lineNum="89" pc="268440885" symbol="receiveReplenish"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="54" lineNum="90" pc="268440896" symbol="receiveReplenish"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="54" lineNum="91" pc="268440900" symbol="receiveReplenish"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="54" lineNum="92" pc="268440920" symbol="receiveReplenish"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="54" lineNum="97" pc="268440939" symbol="receiveReplenish"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="54" lineNum="98" pc="268440955" symbol="receiveReplenish"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="55" lineNum="106" pc="268440979" symbol="setAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="55" lineNum="110" pc="268440983" symbol="setAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="55" lineNum="111" pc="268441022" symbol="setAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="55" lineNum="116" pc="268441122" symbol="setAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="55" lineNum="117" pc="268441146" symbol="setAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="56" lineNum="123" pc="268441181" symbol="receiveToken"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="56" lineNum="124" pc="268441185" symbol="receiveToken"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="56" lineNum="125" pc="268441201" symbol="receiveToken"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="56" lineNum="126" pc="268441212" symbol="receiveToken"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="56" lineNum="127" pc="268441222" symbol="receiveToken"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="56" lineNum="131" pc="268441250" symbol="receiveToken"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="56" lineNum="132" pc="268441266" symbol="receiveToken"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="57" lineNum="136" pc="268441293" symbol="receiveAccountState"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="57" lineNum="137" pc="268441297" symbol="receiveAccountState"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="57" lineNum="138" pc="268441313" symbol="receiveAccountState"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="57" lineNum="139" pc="268441324" symbol="receiveAccountState"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="57" lineNum="140" pc="268441334" symbol="receiveAccountState"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="57" lineNum="141" pc="268441354" symbol="receiveAccountState"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="57" lineNum="142" pc="268441391" symbol="receiveAccountState"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="57" lineNum="143" pc="268441428" symbol="receiveAccountState"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="57" lineNum="144" pc="268441465" symbol="receiveAccountState"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="57" lineNum="148" pc="268441484" symbol="receiveAccountState"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="57" lineNum="149" pc="268441500" symbol="receiveAccountState"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="58" lineNum="153" pc="268441524" symbol="receiveAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="58" lineNum="154" pc="268441528" symbol="receiveAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="58" lineNum="155" pc="268441544" symbol="receiveAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="58" lineNum="156" pc="268441555" symbol="receiveAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="58" lineNum="157" pc="268441565" symbol="receiveAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="58" lineNum="158" pc="268441585" symbol="receiveAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="58" lineNum="159" pc="268441616" symbol="receiveAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="58" lineNum="160" pc="268441647" symbol="receiveAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="58" lineNum="161" pc="268441678" symbol="receiveAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="58" lineNum="162" pc="268441709" symbol="receiveAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="58" lineNum="163" pc="268441740" symbol="receiveAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="58" lineNum="167" pc="268441759" symbol="receiveAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="58" lineNum="168" pc="268441775" symbol="receiveAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="59" lineNum="172" pc="268441799" symbol="receiveSetAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="59" lineNum="173" pc="268441803" symbol="receiveSetAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="59" lineNum="174" pc="268441819" symbol="receiveSetAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="59" lineNum="175" pc="268441830" symbol="receiveSetAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="59" lineNum="179" pc="268441843" symbol="receiveSetAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="59" lineNum="180" pc="268441859" symbol="receiveSetAutoPaySettings"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="60" lineNum="185" pc="268441883" symbol="receiveAccountInfo"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="60" lineNum="186" pc="268441887" symbol="receiveAccountInfo"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="60" lineNum="187" pc="268441903" symbol="receiveAccountInfo"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="60" lineNum="188" pc="268441914" symbol="receiveAccountInfo"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="60" lineNum="189" pc="268441924" symbol="receiveAccountInfo"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="60" lineNum="190" pc="268441961" symbol="receiveAccountInfo"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="60" lineNum="191" pc="268441993" symbol="receiveAccountInfo"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="60" lineNum="195" pc="268442012" symbol="receiveAccountInfo"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="60" lineNum="196" pc="268442028" symbol="receiveAccountInfo"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="61" lineNum="200" pc="268442052" symbol="receiveCardQueryParams"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="61" lineNum="201" pc="268442056" symbol="receiveCardQueryParams"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="61" lineNum="202" pc="268442072" symbol="receiveCardQueryParams"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="61" lineNum="203" pc="268442092" symbol="receiveCardQueryParams"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="61" lineNum="204" pc="268442103" symbol="receiveCardQueryParams"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="61" lineNum="205" pc="268442113" symbol="receiveCardQueryParams"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="61" lineNum="206" pc="268442136" symbol="receiveCardQueryParams"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="61" lineNum="207" pc="268442161" symbol="receiveCardQueryParams"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="61" lineNum="211" pc="268442180" symbol="receiveCardQueryParams"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\getData.mc" id="61" lineNum="212" pc="268442196" symbol="receiveCardQueryParams"/>
+<entry filename="Rez" id="67" lineNum="16" pc="268442220" symbol="MainLayout"/>
+<entry filename="Rez" id="67" lineNum="18" pc="268442232" symbol="MainLayout"/>
+<entry filename="Rez" id="67" lineNum="19" pc="268442351" symbol="MainLayout"/>
+<entry filename="Rez" id="67" lineNum="21" pc="268442403" symbol="MainLayout"/>
 </pcToLineNum>
 <symbolTable>
-<entry id="8389124" method="true" symbol="onUpdate"/>
-<entry field="true" id="8388611" module="true" symbol="Toybox"/>
-<entry id="10" object="true" symbol="whsdWidgetProjectView"/>
-<entry id="8388770" module="true" object="true" symbol="Strings"/>
-<entry id="8389280" method="true" symbol="getInitialView"/>
 <entry id="8388639" module="true" symbol="Graphics"/>
-<entry id="15" method="true" symbol="MainLayout"/>
-<entry id="8388769" module="true" object="true" symbol="Rez"/>
-<entry id="8389123" method="true" symbol="onShow"/>
-<entry id="8388702" method="true" symbol="initialize"/>
-<entry field="true" id="16" symbol="AppName"/>
-<entry field="true" id="14" symbol="LauncherIcon"/>
+<entry field="true" id="36" symbol="getTransponderOptions"/>
+<entry field="true" id="24" symbol="realm"/>
+<entry field="true" id="8389590" method="true" symbol="HTTP_REQUEST_METHOD_POST"/>
+<entry field="true" id="76" symbol="titleText"/>
+<entry field="true" id="49" symbol="urlParams"/>
+<entry id="21" object="true" symbol="MenuDelegate"/>
+<entry id="20" object="true" symbol="MainDelegate"/>
+<entry id="19" module="true" symbol="ParamModule"/>
+<entry field="true" id="77" symbol="titleAccount"/>
+<entry id="70" method="true" symbol="MainLayout"/>
+<entry field="true" id="31" symbol="getAccountStatistics"/>
+<entry field="true" id="73" symbol="critical_balance_title"/>
+<entry field="true" id="79" symbol="titleCard"/>
+<entry field="true" id="71" symbol="api_pass_title"/>
+<entry field="true" id="29" method="true" symbol="getAccountState"/>
+<entry field="true" id="88" symbol="apiUserAgent"/>
+<entry field="true" id="32" symbol="getTransactions"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry field="true" id="8389588" method="true" symbol="HTTP_REQUEST_METHOD_GET"/>
+<entry field="true" id="39" symbol="changeTransponderOption"/>
+<entry id="48" method="true" symbol="renderDisplay"/>
+<entry field="true" id="28" method="true" symbol="getToken"/>
+<entry id="15" module="true" symbol="ApiFunctions"/>
+<entry id="13" object="true" symbol="Pays"/>
+<entry field="true" id="42" symbol="setAccountParams"/>
+<entry field="true" id="61" symbol="confLoad"/>
+<entry id="14" object="true" symbol="app"/>
+<entry field="true" id="64" symbol="Pass"/>
+<entry field="true" id="74" symbol="AppName"/>
+<entry field="true" id="50" symbol="urlMethod"/>
+<entry field="true" id="37" symbol="connectTransponderOption"/>
+<entry id="8388772" module="true" object="true" symbol="Fonts"/>
+<entry id="8389345" symbol="rezId"/>
+<entry id="93" symbol="accInfo"/>
+<entry id="18" object="true" symbol="TransponderInfo"/>
 <entry id="8388648" module="true" symbol="WatchUi"/>
-<entry id="8389281" method="true" symbol="onStop"/>
+<entry field="true" id="72" symbol="api_login_title"/>
+<entry field="true" id="68" symbol="id_monkey"/>
+<entry field="true" id="43" method="true" symbol="getAutoPaySettings"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
 <entry field="true" id="8389065" symbol="locY"/>
 <entry field="true" id="8389064" symbol="locX"/>
+<entry field="true" id="25" symbol="autoPayUrl"/>
+<entry id="65" method="true" symbol="loadParamData"/>
+<entry id="11" object="true" symbol="ConfModule"/>
+<entry field="true" id="75" symbol="criticalMsg"/>
 <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry field="true" id="8389834" method="true" symbol="HTTP_RESPONSE_CONTENT_TYPE_URL_ENCODED"/>
+<entry field="true" id="63" symbol="Login"/>
+<entry id="67" module="true" symbol="Menus"/>
+<entry field="true" id="45" method="true" symbol="getCardQueryParams"/>
+<entry field="true" id="90" symbol="apiPass"/>
+<entry field="true" id="60" symbol="getData"/>
 <entry id="8389122" method="true" symbol="onLayout"/>
-<entry id="8389279" method="true" symbol="onStart"/>
-<entry field="true" id="13" symbol="id_monkey"/>
-<entry id="11" module="true" symbol="Layouts"/>
-<entry id="8389125" method="true" symbol="onHide"/>
-<entry id="8389345" symbol="rezId"/>
-<entry id="8390088" module="true" object="true" symbol="JsonData"/>
 <entry field="true" id="8389063" symbol="identifier"/>
-<entry id="12" module="true" symbol="Menus"/>
-<entry id="8388772" module="true" object="true" symbol="Fonts"/>
-<entry id="9" object="true" symbol="whsdWidgetProjectApp"/>
+<entry field="true" id="78" symbol="titleStatus"/>
+<entry field="true" id="33" symbol="getTransponders"/>
+<entry field="true" id="38" symbol="disconnectTransponderOption"/>
+<entry id="56" method="true" symbol="receiveAutoPaySettings"/>
+<entry id="53" method="true" symbol="receiveReplenish"/>
+<entry field="true" id="41" symbol="getAccountParams"/>
+<entry field="true" id="30" method="true" symbol="getAccountInfo"/>
+<entry field="true" id="40" symbol="renameTransponder"/>
+<entry id="59" method="true" symbol="receiveCardQueryParams"/>
+<entry field="true" id="84" symbol="titleMenuPay"/>
+<entry id="8388786" method="true" symbol="method"/>
+<entry field="true" id="23" symbol="apiUrl"/>
+<entry field="true" id="62" symbol="criticalBalance"/>
+<entry id="8389619" method="true" symbol="onSelect"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry field="true" id="83" symbol="titleMenuAutoPay"/>
+<entry field="true" id="27" symbol="getManageCardUrl"/>
+<entry field="true" id="86" symbol="__getData"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry id="8390088" module="true" object="true" symbol="JsonData"/>
+<entry field="true" id="47" symbol="myapp"/>
+<entry field="true" id="87" symbol="httpCode"/>
+<entry field="true" id="69" symbol="LauncherIcon"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry id="12" object="true" symbol="HttpSpec"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry field="true" id="81" symbol="titleAutoPayThreshold"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry id="16" object="true" symbol="view"/>
+<entry field="true" id="85" symbol="_getData"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry id="55" method="true" symbol="receiveAccountState"/>
+<entry field="true" id="91" symbol="urlOptions"/>
+<entry id="8389109" method="true" symbol="onMenuItem"/>
+<entry field="true" id="46" symbol="linkPhoneNumber"/>
+<entry id="94" symbol="autoPay"/>
+<entry field="true" id="80" symbol="titleAutoPayAmount"/>
+<entry field="true" id="26" symbol="getBindCardUrl"/>
+<entry id="17" object="true" symbol="AutoPayment"/>
+<entry id="66" module="true" symbol="Layouts"/>
+<entry id="22" object="true" symbol="GetData"/>
+<entry id="8388656" object="true" symbol="InputDelegate"/>
+<entry id="58" method="true" symbol="receiveAccountInfo"/>
+<entry id="57" method="true" symbol="receiveSetAutoPaySettings"/>
+<entry field="true" id="44" method="true" symbol="setAutoPaySettings"/>
+<entry field="true" id="82" symbol="titleMenuAcc"/>
+<entry field="true" id="89" symbol="apiLogin"/>
+<entry field="true" id="51" symbol="httpSpec"/>
+<entry field="true" id="35" symbol="easyRestoreConfirm"/>
+<entry id="54" method="true" symbol="receiveToken"/>
+<entry id="52" method="true" symbol="postReplenish1"/>
+<entry field="true" id="34" symbol="easyRestoreRequest"/>
+<entry id="8389125" method="true" symbol="onHide"/>
+<entry id="95" symbol="accPay"/>
+<entry id="92" method="true" symbol="getHttpRequest"/>
 <entry id="8388635" module="true" symbol="Application"/>
 </symbolTable>
 <localVars>
-<entry endPc="268435484" name="state" stackId="1" startPc="268435479"/>
-<entry endPc="268435489" name="state" stackId="1" startPc="268435484"/>
-<entry endPc="268435596" name="dc" stackId="1" startPc="268435554"/>
-<entry endPc="268435626" name="dc" stackId="1" startPc="268435601"/>
-<entry endPc="268435843" name="rez_cmp_local_bitmap_id_monkey" stackId="2" startPc="268435643"/>
-<entry endPc="268435844" name="dc" stackId="1" startPc="268435631"/>
+<entry endPc="268435623" name="urlOptions" stackId="3" startPc="268435581"/>
+<entry endPc="268435623" name="urlParams" stackId="2" startPc="268435581"/>
+<entry endPc="268435623" name="urlMethod" stackId="4" startPc="268435581"/>
+<entry endPc="268435623" name="urlRequest" stackId="1" startPc="268435581"/>
+<entry endPc="268435710" name="params" stackId="1" startPc="268435623"/>
+<entry endPc="268435710" name="method" stackId="2" startPc="268435623"/>
+<entry endPc="268435797" name="params" stackId="1" startPc="268435710"/>
+<entry endPc="268435797" name="method" stackId="2" startPc="268435710"/>
+<entry endPc="268435891" name="url" stackId="3" startPc="268435797"/>
+<entry endPc="268435891" name="params" stackId="1" startPc="268435797"/>
+<entry endPc="268435891" name="method" stackId="2" startPc="268435797"/>
+<entry endPc="268436027" name="state" stackId="1" startPc="268436022"/>
+<entry endPc="268436032" name="state" stackId="1" startPc="268436027"/>
+<entry endPc="268436203" name="getData" stackId="1" startPc="268436120"/>
+<entry endPc="268436578" name="i" stackId="3" startPc="268436480"/>
+<entry endPc="268436578" name="errormsg" stackId="2" startPc="268436351"/>
+<entry endPc="268436579" name="dc" stackId="1" startPc="268436203"/>
+<entry endPc="268437159" name="dc" stackId="1" startPc="268436607"/>
+<entry endPc="268437447" name="i" stackId="3" startPc="268437349"/>
+<entry endPc="268437448" name="errormsg" stackId="2" startPc="268437220"/>
+<entry endPc="268437478" name="dc" stackId="1" startPc="268437159"/>
+<entry endPc="268437614" name="dc" stackId="1" startPc="268437549"/>
+<entry endPc="268437694" name="dc" stackId="1" startPc="268437663"/>
+<entry endPc="268438221" name="dc" stackId="1" startPc="268437694"/>
+<entry endPc="268438336" name="dc" stackId="1" startPc="268438271"/>
+<entry endPc="268438416" name="dc" stackId="1" startPc="268438385"/>
+<entry endPc="268439097" name="dc" stackId="1" startPc="268438416"/>
+<entry endPc="268439134" name="getData" stackId="1" startPc="268439097"/>
+<entry endPc="268439341" name="delegate" stackId="2" startPc="268439138"/>
+<entry endPc="268439341" name="menu" stackId="1" startPc="268439138"/>
+<entry endPc="268439375" name="_getData" stackId="1" startPc="268439342"/>
+<entry endPc="268439723" name="cardQuery" stackId="5" startPc="268439554"/>
+<entry endPc="268439723" name="urlPart" stackId="6" startPc="268439554"/>
+<entry endPc="268439726" name="autoPaymentView" stackId="3" startPc="268439379"/>
+<entry endPc="268439726" name="delegate" stackId="4" startPc="268439379"/>
+<entry endPc="268439726" name="accInfoView" stackId="2" startPc="268439379"/>
+<entry endPc="268439727" name="item" stackId="1" startPc="268439375"/>
+<entry endPc="268439769" name="http" stackId="1" startPc="268439754"/>
+<entry endPc="268440865" name="url" stackId="1" startPc="268440571"/>
+<entry endPc="268440979" name="responseCode" stackId="1" startPc="268440865"/>
+<entry endPc="268440979" name="data" stackId="2" startPc="268440865"/>
+<entry endPc="268441180" name="threshold" stackId="1" startPc="268440983"/>
+<entry endPc="268441293" name="responseCode" stackId="1" startPc="268441181"/>
+<entry endPc="268441293" name="data" stackId="2" startPc="268441181"/>
+<entry endPc="268441524" name="responseCode" stackId="1" startPc="268441293"/>
+<entry endPc="268441524" name="data" stackId="2" startPc="268441293"/>
+<entry endPc="268441799" name="responseCode" stackId="1" startPc="268441524"/>
+<entry endPc="268441799" name="data" stackId="2" startPc="268441524"/>
+<entry endPc="268441883" name="responseCode" stackId="1" startPc="268441799"/>
+<entry endPc="268441883" name="data" stackId="2" startPc="268441799"/>
+<entry endPc="268442052" name="responseCode" stackId="1" startPc="268441883"/>
+<entry endPc="268442052" name="data" stackId="2" startPc="268441883"/>
+<entry endPc="268442220" name="responseCode" stackId="1" startPc="268442052"/>
+<entry endPc="268442220" name="data" stackId="2" startPc="268442052"/>
+<entry endPc="268442420" name="rez_cmp_local_bitmap_id_monkey" stackId="2" startPc="268442232"/>
+<entry endPc="268442421" name="dc" stackId="1" startPc="268442220"/>
 </localVars>
 <annotations/>
 <dataEntryOffsetMappings>
-<dataEntry offset="87" parentId="" symbolId="globals" type="module"/>
-<dataEntry offset="166" parentId="globals" symbolId="whsdWidgetProjectView" type="class"/>
-<dataEntry offset="245" parentId="globals" symbolId="Rez" type="module"/>
-<dataEntry offset="324" parentId="Rez" symbolId="Drawables" type="module"/>
-<dataEntry offset="371" parentId="Rez" symbolId="Menus" type="module"/>
-<dataEntry offset="402" parentId="Rez" symbolId="Fonts" type="module"/>
-<dataEntry offset="433" parentId="Rez" symbolId="Layouts" type="module"/>
-<dataEntry offset="472" parentId="Rez" symbolId="JsonData" type="module"/>
-<dataEntry offset="503" parentId="Rez" symbolId="Strings" type="module"/>
-<dataEntry offset="542" parentId="globals" symbolId="whsdWidgetProjectApp" type="class"/>
+<dataEntry offset="103" parentId="" symbolId="globals" type="module"/>
+<dataEntry offset="342" parentId="globals" symbolId="ApiFunctions" type="module"/>
+<dataEntry offset="565" parentId="globals" symbolId="AutoPayment" type="class"/>
+<dataEntry offset="660" parentId="globals" symbolId="GetData" type="class"/>
+<dataEntry offset="851" parentId="globals" symbolId="Pays" type="class"/>
+<dataEntry offset="898" parentId="globals" symbolId="app" type="class"/>
+<dataEntry offset="993" parentId="globals" symbolId="ConfModule" type="class"/>
+<dataEntry offset="1080" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry offset="1159" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry offset="1206" parentId="Rez" symbolId="Menus" type="module"/>
+<dataEntry offset="1237" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry offset="1268" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry offset="1307" parentId="Rez" symbolId="JsonData" type="module"/>
+<dataEntry offset="1338" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry offset="1401" parentId="globals" symbolId="ParamModule" type="module"/>
+<dataEntry offset="1512" parentId="globals" symbolId="TransponderInfo" type="class"/>
+<dataEntry offset="1607" parentId="globals" symbolId="view" type="class"/>
+<dataEntry offset="1710" parentId="globals" symbolId="MenuDelegate" type="class"/>
+<dataEntry offset="1781" parentId="globals" symbolId="MainDelegate" type="class"/>
+<dataEntry offset="1844" parentId="globals" symbolId="InputDelegate" type="class"/>
+<dataEntry offset="1891" parentId="globals" symbolId="HttpSpec" type="class"/>
 </dataEntryOffsetMappings>
 <functions>
-<functionEntry accessMode="public" name="initialize" parent="whsdWidgetProjectApp">
+<functionEntry accessMode="public" name="loadParamData" parent="ConfModule">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" name="onStart" parent="whsdWidgetProjectApp">
+<functionEntry accessMode="public" name="getHttpRequest" parent="HttpSpec">
+<param id="urlRequest"/>
+<param id="urlParams"/>
+<param id="urlOptions"/>
+<param id="urlMethod"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="HTTP_RESPONSE_CONTENT_TYPE_URL_ENCODED" parent="HttpSpec">
+<param id="params"/>
+<param id="method"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="HTTP_REQUEST_METHOD_GET" parent="HttpSpec">
+<param id="params"/>
+<param id="method"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="HTTP_REQUEST_METHOD_POST" parent="HttpSpec">
+<param id="params"/>
+<param id="method"/>
+<param id="url"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="app">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onStart" parent="app">
 <param id="state"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" name="onStop" parent="whsdWidgetProjectApp">
+<functionEntry accessMode="public" name="onStop" parent="app">
 <param id="state"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" name="getInitialView" parent="whsdWidgetProjectApp">
+<functionEntry accessMode="public" name="getInitialView" parent="app">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" name="initialize" parent="whsdWidgetProjectView">
+<functionEntry accessMode="public" name="initialize" parent="view">
+<param id="getData"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" name="onLayout" parent="whsdWidgetProjectView">
+<functionEntry accessMode="public" name="onLayout" parent="view">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" name="onShow" parent="whsdWidgetProjectView">
+<functionEntry accessMode="public" name="onShow" parent="view">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" name="onUpdate" parent="whsdWidgetProjectView">
+<functionEntry accessMode="public" name="renderDisplay" parent="view">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" name="onHide" parent="whsdWidgetProjectView">
+<functionEntry accessMode="public" name="onUpdate" parent="view">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onHide" parent="view">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="AutoPayment">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onLayout" parent="AutoPayment">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onShow" parent="AutoPayment">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onHide" parent="AutoPayment">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onUpdate" parent="AutoPayment">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="renderDisplay" parent="AutoPayment">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="TransponderInfo">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onLayout" parent="TransponderInfo">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onShow" parent="TransponderInfo">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onHide" parent="TransponderInfo">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onUpdate" parent="TransponderInfo">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="renderDisplay" parent="TransponderInfo">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="MainDelegate">
+<param id="getData"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onSelect" parent="MainDelegate">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="MenuDelegate">
+<param id="_getData"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onMenuItem" parent="MenuDelegate">
+<param id="item"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="InputDelegate">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="GetData">
+<param id="http"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="getToken" parent="GetData">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="getAccountState" parent="GetData">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="getAutoPaySettings" parent="GetData">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="getAccountInfo" parent="GetData">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="getCardQueryParams" parent="GetData">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="postReplenish1" parent="GetData">
+<param id="url"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="receiveReplenish" parent="GetData">
+<param id="responseCode"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="setAutoPaySettings" parent="GetData">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="receiveToken" parent="GetData">
+<param id="responseCode"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="receiveAccountState" parent="GetData">
+<param id="responseCode"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="receiveAutoPaySettings" parent="GetData">
+<param id="responseCode"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="receiveSetAutoPaySettings" parent="GetData">
+<param id="responseCode"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="receiveAccountInfo" parent="GetData">
+<param id="responseCode"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="receiveCardQueryParams" parent="GetData">
+<param id="responseCode"/>
+<param id="data"/>
 <documentation/>
 </functionEntry>
 <functionEntry accessMode="public" name="MainLayout" parent="Layouts">

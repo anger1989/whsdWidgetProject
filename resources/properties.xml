@@ -1,0 +1,25 @@
+<resources>
+  <properties>
+  	<property id="api_login" type="string"></property>
+    <property id="api_pass" type="string"></property>
+	<property id="critical_balance" type="number">150</property>
+ </properties>
+
+  <strings>
+    <string id="api_login_title">Login</string>
+    <string id="api_pass_title">Password</string>
+	<string id="critical_balance_title">Balance for exception</string>
+  </strings>
+
+  <settings>
+  	<setting propertyKey="@Properties.api_login" title="@Strings.api_login_title">
+      <settingConfig type="alphaNumeric"/>
+    </setting>
+    <setting propertyKey="@Properties.api_pass" title="@Strings.api_pass_title">
+      <settingConfig type="password" />
+    </setting>
+	<setting propertyKey="@Properties.critical_balance" title="@Strings.critical_balance_title">
+      <settingConfig type="numeric" />
+    </setting>
+  </settings>
+</resources>
