@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<pcToLineNum>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectApp.mc" id="3" lineNum="5" pc="268435456" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectApp.mc" id="3" lineNum="6" pc="268435460" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectApp.mc" id="4" lineNum="10" pc="268435479" symbol="onStart"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectApp.mc" id="5" lineNum="14" pc="268435484" symbol="onStop"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectApp.mc" id="6" lineNum="18" pc="268435489" symbol="getInitialView"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectApp.mc" id="6" lineNum="19" pc="268435493" symbol="getInitialView"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectView.mc" id="8" lineNum="5" pc="268435531" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectView.mc" id="8" lineNum="6" pc="268435535" symbol="initialize"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectView.mc" id="9" lineNum="10" pc="268435554" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectView.mc" id="9" lineNum="11" pc="268435558" symbol="onLayout"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectView.mc" id="10" lineNum="17" pc="268435596" symbol="onShow"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectView.mc" id="11" lineNum="21" pc="268435601" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectView.mc" id="11" lineNum="23" pc="268435605" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Igor.Golovko\\Documents\\GitHub\\whsdWidgetProject\\source\\whsdWidgetProjectView.mc" id="12" lineNum="29" pc="268435626" symbol="onHide"/>
+<entry filename="Rez" id="18" lineNum="16" pc="268435631" symbol="MainLayout"/>
+<entry filename="Rez" id="18" lineNum="19" pc="268435643" symbol="MainLayout"/>
+<entry filename="Rez" id="18" lineNum="20" pc="268435762" symbol="MainLayout"/>
+<entry filename="Rez" id="18" lineNum="22" pc="268435826" symbol="MainLayout"/>
+</pcToLineNum>
+<symbolTable>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry id="10" object="true" symbol="whsdWidgetProjectView"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="8388639" module="true" symbol="Graphics"/>
+<entry id="15" method="true" symbol="MainLayout"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry field="true" id="16" symbol="AppName"/>
+<entry field="true" id="14" symbol="LauncherIcon"/>
+<entry id="8388648" module="true" symbol="WatchUi"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry field="true" id="8389065" symbol="locY"/>
+<entry field="true" id="8389064" symbol="locX"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry field="true" id="13" symbol="id_monkey"/>
+<entry id="11" module="true" symbol="Layouts"/>
+<entry id="8389125" method="true" symbol="onHide"/>
+<entry id="8389345" symbol="rezId"/>
+<entry id="8390088" module="true" object="true" symbol="JsonData"/>
+<entry field="true" id="8389063" symbol="identifier"/>
+<entry id="12" module="true" symbol="Menus"/>
+<entry id="8388772" module="true" object="true" symbol="Fonts"/>
+<entry id="9" object="true" symbol="whsdWidgetProjectApp"/>
+<entry id="8388635" module="true" symbol="Application"/>
+</symbolTable>
+<localVars>
+<entry endPc="268435484" name="state" stackId="1" startPc="268435479"/>
+<entry endPc="268435489" name="state" stackId="1" startPc="268435484"/>
+<entry endPc="268435596" name="dc" stackId="1" startPc="268435554"/>
+<entry endPc="268435626" name="dc" stackId="1" startPc="268435601"/>
+<entry endPc="268435843" name="rez_cmp_local_bitmap_id_monkey" stackId="2" startPc="268435643"/>
+<entry endPc="268435844" name="dc" stackId="1" startPc="268435631"/>
+</localVars>
+<annotations/>
+<dataEntryOffsetMappings>
+<dataEntry offset="87" parentId="" symbolId="globals" type="module"/>
+<dataEntry offset="166" parentId="globals" symbolId="whsdWidgetProjectView" type="class"/>
+<dataEntry offset="245" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry offset="324" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry offset="371" parentId="Rez" symbolId="Menus" type="module"/>
+<dataEntry offset="402" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry offset="433" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry offset="472" parentId="Rez" symbolId="JsonData" type="module"/>
+<dataEntry offset="503" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry offset="542" parentId="globals" symbolId="whsdWidgetProjectApp" type="class"/>
+</dataEntryOffsetMappings>
+<functions>
+<functionEntry accessMode="public" name="initialize" parent="whsdWidgetProjectApp">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onStart" parent="whsdWidgetProjectApp">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onStop" parent="whsdWidgetProjectApp">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="getInitialView" parent="whsdWidgetProjectApp">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="whsdWidgetProjectView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onLayout" parent="whsdWidgetProjectView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onShow" parent="whsdWidgetProjectView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onUpdate" parent="whsdWidgetProjectView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onHide" parent="whsdWidgetProjectView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="MainLayout" parent="Layouts">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+</functions>
+</debugInfo>
