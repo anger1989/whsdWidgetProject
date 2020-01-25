@@ -44,10 +44,11 @@ class GetData{
            _properties.setApiToken(data);
            System.println("Token"+_properties.getApiToken());
            Ui.requestUpdate();  
+           getAccountState();
         }
         else
         {
-           Ui.requestUpdate();
+          // Ui.requestUpdate();
            System.println("Not Response" +responseCode);
         }
     }
@@ -128,7 +129,7 @@ class GetData{
        if (responseCode == 200) {
           data = data["return"];
           _properties.setLinkedPhoneNumber(data[0]["linked_phone_number"]);
-          Ui.requestUpdate();
+         // Ui.requestUpdate();
         }
         else
        {
@@ -142,7 +143,7 @@ class GetData{
            
        urlParams = {"function" => ApiFunctions.getCardQueryParams, 
     	             "auth_token" => _properties.getApiToken(),
-    	             "p_phone_number" => _properties.linkedPhoneNumber};
+    	             "p_phone_number" => _properties.getLinkedPhoneNumber()};
        urlMethod = method(:receiveCardQueryParams);
        _httpSpec.HTTP_REQUEST_METHOD_GET(urlParams, urlMethod);
     }
@@ -153,8 +154,8 @@ class GetData{
       System.println(responseCode);
        if (responseCode == 200) {
          data = data["return"];  
-         _properties.setProperty("cardQueryParams", data);      
-         Ui.requestUpdate();
+         _properties.setCardQueryParams(data);      
+        // Ui.requestUpdate();
         }
         else
        {

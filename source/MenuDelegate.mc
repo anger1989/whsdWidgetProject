@@ -25,6 +25,7 @@ class MainDelegate extends Ui.BehaviorDelegate {
         menu.addItem(ParamModule.titleMenuAcc, :accInfo);
         menu.addItem(ParamModule.titleMenuAutoPay, :autoPay);
         menu.addItem(ParamModule.titleMenuPay, :accPay);
+        menu.addItem(ParamModule.titleMenuAbout, :about);
         delegate = new MenuDelegate(_getData, _properties); 
         WatchUi.pushView(menu, delegate, WatchUi.SLIDE_IMMEDIATE);
         return true;
@@ -40,6 +41,7 @@ class MenuDelegate extends Ui.MenuInputDelegate {
         __properties = _properties;
         __getData = _getData;
          MenuInputDelegate.initialize();
+         
     }
 
     
@@ -53,13 +55,15 @@ class MenuDelegate extends Ui.MenuInputDelegate {
              __getData.getAutoPaySettings();
              Ui.switchToView(autoPaymentView, delegate, Ui.SLIDE_LEFT);
             
-        } else if ( item == :accPay) {
+        } else if ( item == :accPay ) {
              var _paymentView = new PaymentView(__properties, __getData);
              __getData.getCardQueryParams();
              Ui.switchToView(_paymentView, delegate, Ui.SLIDE_LEFT); 
-             Comm.openWebPage("https://mpaymentsso.nch-spb.com/to-replenish?"+myapp.getProperty("cardQueryParams")+"&pan=6362875000003730736&amount=100", null, null);
-            
-        }
+        } else if ( item == :about ) {
+             var _aboutAppView = new AboutAppView();
+             Ui.switchToView(_aboutAppView, delegate, Ui.SLIDE_LEFT);
+           }
+         
     }
  
 }

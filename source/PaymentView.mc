@@ -21,13 +21,7 @@ class PaymentView extends Ui.View {
        setLayout(Rez.Layouts.MainLayout(dc));
        System.println("onLayout() called");
        
-       System.println("phone: "+_properties.linkedPhoneNumber);
-       System.println(myapp.getProperty("cardQueryParams"));
-       if (myapp.getProperty("cardQueryParams") != null) {
-       var urlPart = makeSignature();
-       System.println(urlPart);
-       _getData.postReplenish1(UrlDictionary.apiAutoPayUrl+urlPart);
-       }
+       System.println("phone: "+_properties.getLinkedPhoneNumber());
     }
     
        
@@ -53,6 +47,7 @@ class PaymentView extends Ui.View {
     }
     
     function renderDisplay(dc) {
+        
         if (myapp.getProperty("cardQueryParams") == null){
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
         dc.clear();
@@ -67,6 +62,8 @@ class PaymentView extends Ui.View {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
         dc.drawText(dc.getWidth()/2, dc.getHeight()/3, Graphics.FONT_MEDIUM, ParamModule.titleLoadSignatureOk, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        Comm.openWebPage("https://mpaymentsso.nch-spb.com/to-replenish?"+_properties.getCardQueryParams()+"&pan=6362875000003730736&amount=100", null, null);
+        
         }
     }
 }

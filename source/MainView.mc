@@ -25,17 +25,23 @@ class view extends Ui.View {
 
     // Load your resources here
     function onLayout(dc) {
+       var dev = System.getDeviceSettings(); 
        setLayout(Rez.Layouts.MainLayout(dc));
+      // loadingPic = Ui.loadResource(Rez.Drawables.loadingPic); 
        System.println("onLayout() called");
-       //System.println("null");
-     
-       System.println(_properties.getApiToken());
-       if (_properties.getApiToken() != null) {
-         System.println("go token");
-       //  _getData.getAccountState();
-       //  _getData.getAccountInfo();
-       }
-       else
+       _getData.getToken(); 
+    //  if (_properties.getApiToken() == null) {
+        //     _getData.getToken(); 
+            
+      //      }
+      //  else {  
+   /*   if (_properties.getApiToken() != null) {
+             _getData.getAccountState(); 
+         //    _getData.getAccountInfo();
+             System.println(_properties.getApiToken());
+       } */
+       
+       /*else
        { 
           var errormsg = ["error token"];
           dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
@@ -45,8 +51,8 @@ class view extends Ui.View {
            dc.drawText(dc.getWidth()/2, 10+(i*15), Graphics.FONT_XTINY, errormsg[i], Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER) ;
  
         }
-        }
-        Ui.requestUpdate();
+        }*/
+      //  Ui.requestUpdate();
         
     }
 
@@ -61,27 +67,14 @@ class view extends Ui.View {
     
 
     function renderDisplay(dc) {
-        loadingPic = Ui.loadResource(Rez.Drawables.loadingPic); 
-        var dev = System.getDeviceSettings(); 
-        if (_properties.getBalance() == null) {
-             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-             dc.clear();
-             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-             dc.drawBitmap((dev.screenWidth - loadingPic.getWidth())/2, (dev.screenHeight - loadingPic.getHeight())/2, loadingPic);
-             _getData.getAccountState();
-            }
-        else {   
+       
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
         dc.clear();
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
         dc.drawText(dc.getWidth()/2, dc.getHeight()/3, Graphics.FONT_LARGE, ParamModule.titleText, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-       // var balance = _properties.getBalance();
-       // System.println(balance);
-        
-       // if (_properties.getBalance() != null) {    
-               if (_properties.getBalance().toNumber() < _confLoad.criticalBalance ) 
+  
+               if (_properties.getBalance() != null && (_properties.getBalance().toNumber() < _confLoad.criticalBalance) ) 
                 {
                      dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
                      dc.drawText(dc.getWidth()/2, dc.getHeight()/1.5, Graphics.FONT_MEDIUM, ParamModule.criticalMsg, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
@@ -91,10 +84,9 @@ class view extends Ui.View {
                 {
                 dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
                 }
-       // }
-        dc.drawText(dc.getWidth()/2, dc.getHeight()/2, Graphics.FONT_LARGE, _properties.getBalance(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-       }
-    }
+       dc.drawText(dc.getWidth()/2, dc.getHeight()/2, Graphics.FONT_LARGE, _properties.getBalance(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+   }
+    
     // Update the view
     function onUpdate(dc) {
         // Call the parent onUpdate function to redraw the layout

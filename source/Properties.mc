@@ -1,6 +1,7 @@
 using Toybox.Application as App;
 
 class Properties {
+    /*Фиг знает почему не работает с обычным сеттерами, а если использовать App.getApp() то все ровно*/
      hidden var myapp = App.getApp();
      
      var balance = "0"; //balance
@@ -93,6 +94,15 @@ class Properties {
     
     function getLinkedPhoneNumber() {
        return myapp.getProperty("linkedPhoneNumber");
+    }
+    
+    //signature
+    function setCardQueryParams(data) {
+       myapp.setProperty("cardQueryParams", data);
+    }
+    
+    function getCardQueryParams() {
+       return myapp.getProperty("cardQueryParams");
     }
     
     function clearProperties() {

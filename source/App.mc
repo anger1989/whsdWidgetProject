@@ -19,7 +19,6 @@ class app extends Application.AppBase {
     // onStart() is called on application start up
     function onStart(state) {
            System.println("OnStart");
-           getData.getToken();
         }
 
     // onStop() is called when your application is exiting
