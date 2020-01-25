@@ -3,7 +3,6 @@ using Toybox.Application as App;
 class Properties {
      hidden var myapp = App.getApp();
      
-    // var apiToken; //api Token
      var balance = "0"; //balance
      var contractNum; //number of contract
      var status; //status of transponder
@@ -13,69 +12,96 @@ class Properties {
      var autoPayBalanceThreshold; //balance threshold
      var autoPayMaxAmountMonth; //max amount of month
      var linkedPhoneNumber; //linked phone number
-     var cardQueryParams; //signature of transponder
-     
-   /* function setToken(data) {
-       apiToken = data;
+  //   var cardQueryParams; //signature of transponder
+    //token  
+    function setApiToken(data) {
+      myapp.setProperty("apiToken", data);
     }
     
-    function getToken() {
-      return apiToken;
-    }*/
-    
-     
+    function getApiToken() {
+     return myapp.getProperty("apiToken");
+    }
+    //balance
     function setBalance(data) {
-       balance = data;
+       myapp.setProperty("balance", data);
     }
-
+    
+    function getBalance() {
+       return myapp.getProperty("balance");
+    }
+    //contractNum
     function setContractNum(data) {
-       contractNum = data;
+       myapp.setProperty("contractNum", data);
     }
-  
     
+    function getContractNum() {
+       return myapp.getProperty("contractNum");
+       
+    }
+    //status
     function setStatus(data) {
-       status = data;
+       myapp.setProperty("status", data);
     }
     
-  
+    function getStatus() {
+       return myapp.getProperty("status");
+    }
+    //cardType
     function setCardType(data) {
-       cardType = data;
+       myapp.setProperty("cardType", data);
     }
     
-  
-    
+    function getCardType() {
+       return myapp.getProperty("cardType");
+    }
+    //baseCard
     function setBaseCard(data) {
-       baseCard = data;
+       myapp.setProperty("baseCard", data);
     }
     
-  
-    
+    function getBaseCard() {
+      return myapp.getProperty("baseCard");
+    }
+    //autoPayAmoung
     function setAutoPayAmount(data) {
-       autoPayAmount = data;
+       myapp.setProperty("autoPayAmount", data);
     }
     
-  
-    
+    function getAutoPayAmount() {
+       return myapp.getProperty("autoPayAmount");
+    }
+    //autoPayBalanceThreshold
     function setAutoPayBalanceThreshold(data) {
-       autoPayBalanceThreshold = data;
+       myapp.setProperty("autoPayBalanceThreshold", data);
     }
     
-  
+    function getAutoPayBalanceThreshold() {
+       return myapp.getProperty("autoPayBalanceThreshold");
+    }
+    //AutoPayMaxAmountMont
     function setAutoPayMaxAmountMonth(data) {
-       autoPayMaxAmountMonth = data;
+       myapp.setProperty("autoPayMaxAmountMonth", data);
     }
     
-   
-    
+    function getAutoPayMaxAmountMonth() {
+       return myapp.getProperty("autoPayMaxAmountMonth");
+    }
+    //phoneNumber
     function setLinkedPhoneNumber(data) {
-       linkedPhoneNumber = data;
+       myapp.setProperty("linkedPhoneNumber", data);
     }
     
-   
+    function getLinkedPhoneNumber() {
+       return myapp.getProperty("linkedPhoneNumber");
+    }
     
-    function setCardQueryParams(data) {
+    function clearProperties() {
+       myapp.clearProperties();
+    }
+    
+   /* function setCardQueryParams(data) {
        cardQueryParams = data;
-    }
+    }*/
     
    
 }

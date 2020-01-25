@@ -8,8 +8,7 @@ using ApiFunctions;
 using UrlDictionary;
 
 class GetData{
-    hidden var myapp = App.getApp();
-       
+      
     hidden var urlParams = "";
     hidden var urlMethod = "";
     hidden var _httpSpec;
@@ -42,8 +41,8 @@ class GetData{
         if (responseCode == 200) {
            data = data["return"];
            System.println(data);
-           myapp.setProperty("apiToken", data);
-           System.println("Token"+myapp.getProperty("apiToken"));
+           _properties.setApiToken(data);
+           System.println("Token"+_properties.getApiToken());
            Ui.requestUpdate();  
         }
         else
@@ -55,27 +54,28 @@ class GetData{
     
    
    //function for get Account data     
-    function getAccountState(apiToken) {
+    function getAccountState() {
        System.println("GetAccountState called");
+        if (_properties.getBalance() == null) {
     	urlParams = {"function" => ApiFunctions.getAccountState, 
-    	             "auth_token" => apiToken};     
+    	             "auth_token" => _properties.getApiToken()};     
     	urlMethod = method(:receiveAccountState);
     	_httpSpec.HTTP_REQUEST_METHOD_GET(urlParams, urlMethod);
     	System.println("check getAccountState");
+    	}
     	
      }
      
     function receiveAccountState(responseCode, data) {
        System.println("check receiveAccountState");
-      
-       _httpSpec.httpCode = responseCode;
+      _httpSpec.httpCode = responseCode;
        if (responseCode == 200) {
           data = data["return"];
           System.println(data);
           _properties.setBalance(data[0]["remainder"]);
           _properties.setContractNum(data[0]["contract_num"]);
           _properties.setStatus(data[0]["status"]);
-          System.println("Balance"+_properties.balance);
+          System.println("Balance"+_properties.getBalance());
           Ui.requestUpdate();
        }
        else
@@ -87,9 +87,9 @@ class GetData{
    
    
   //function for get Auto Pay Settings   
-    function getAutoPaySettings(apiToken) {
+    function getAutoPaySettings() {
         urlParams = {"function" => ApiFunctions.getAutoPaySettings, 
-    	             "auth_token" => apiToken};
+    	             "auth_token" => _properties.getApiToken()};
     	urlMethod = method(:receiveAutoPaySettings);
     	_httpSpec.HTTP_REQUEST_METHOD_GET(urlParams, urlMethod);
     }
@@ -114,19 +114,20 @@ class GetData{
     }
     
    //function for get account info
-    function getAccountInfo(apiToken) {
+    function getAccountInfo() {
+       System.println("Call getAccountInfo");
         urlParams = {"function" => ApiFunctions.getAccountInfo, 
-    	             "auth_token" => apiToken};
+    	             "auth_token" => _properties.getApiToken()};
     	urlMethod = method(:receiveAccountInfo);
     	_httpSpec.HTTP_REQUEST_METHOD_GET(urlParams, urlMethod);
     }
     
     function receiveAccountInfo(responseCode, data) {
+       System.println("Receive getAccountInfo");
        _httpSpec.httpCode = responseCode;
        if (responseCode == 200) {
           data = data["return"];
           _properties.setLinkedPhoneNumber(data[0]["linked_phone_number"]);
-          System.println(data[0]["linked_phone_number"]);
           Ui.requestUpdate();
         }
         else
@@ -137,23 +138,22 @@ class GetData{
     }
     
   //function for get signature  
-    function getCardQueryParams(apiToken) {
-     //  System.println(myapp.getProperty("apiToken"));
-     //  System.println(myapp.getProperty("linkedPhoneNumber"));
-       
+    function getCardQueryParams() {  
+           
        urlParams = {"function" => ApiFunctions.getCardQueryParams, 
-    	             "auth_token" => apiToken,
-    	             "p_phone_number" => _properties.cardQueryParams};
+    	             "auth_token" => _properties.getApiToken(),
+    	             "p_phone_number" => _properties.linkedPhoneNumber};
        urlMethod = method(:receiveCardQueryParams);
        _httpSpec.HTTP_REQUEST_METHOD_GET(urlParams, urlMethod);
     }
     
    function receiveCardQueryParams(responseCode, data) {
+      System.println("Receive CardQueryparams");
       _httpSpec.httpCode = responseCode;
       System.println(responseCode);
        if (responseCode == 200) {
-         data = data["return"];        
-         _properties.setCardQueryParams(data);
+         data = data["return"];  
+         _properties.setProperty("cardQueryParams", data);      
          Ui.requestUpdate();
         }
         else
@@ -165,8 +165,11 @@ class GetData{
     
 /* Get for pays */
     function postReplenish1(url) {
-      System.println(url);
-       urlParams = { "transponderIdPostfix" => "3730736", 
+       System.println(url);
+       urlParams = { "phone" => "9811941341",
+                     "t" => "1579882623",
+                     "sig" => "f72861e8c2f61eb430e33b0553aa0ecc99f4000a",
+                     "transponderIdPostfix" => "3730736", 
     	             "BaseFakeAuthPaymentForm[account]" => "6362875000003730736", 
     	             "BaseFakeAuthPaymentForm[sum]" => "100", 
     	             "SelectAccountForm[accounts]" => "-100500",
@@ -182,14 +185,14 @@ class GetData{
     	             "BaseFakeAuthPaymentForm[customerContact]" => "",
     	             "BaseFakeAuthPaymentForm[offer]" => "1"};
        urlMethod = method(:receiveReplenish);
-       _httpSpec.HTTP_REQUEST_METHOD_POST(urlParams, urlMethod, url);
+       _httpSpec.HTTP_REQUEST_METHOD_POST(urlParams, urlMethod, "https://mpaymentsso.nch-spb.com/to-replenish?");
     }
     
     function receiveReplenish(responseCode, data) {
        _httpSpec.httpCode = responseCode;
         if (responseCode == 200) {
            data = data;
-           System.println(data);
+           System.println("data: "+data);
            Ui.requestUpdate();
            
         }

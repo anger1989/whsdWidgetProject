@@ -1,3 +1,8 @@
+version 0.0.2.1
+---Add preview info picture
+---Made new objects
+---Refactored getData methods
+
 version 0.0.2.0
 ---Add Account Info
 ---Add Autopay Info

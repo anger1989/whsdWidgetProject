@@ -24,6 +24,7 @@ class app extends Application.AppBase {
 
     // onStop() is called when your application is exiting
     function onStop(state) {
+           properties.clearProperties();
     }
 
     // Return the initial view of your application here

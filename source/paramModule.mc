@@ -6,6 +6,8 @@ module ParamModule {
    const titleCard = "Карта";
    const titleAutoPayAmount = "Сумма";
    const titleAutoPayThreshold = "Порог";
+   const titleLoadSignature = "Загружаю подпись...";
+   const titleLoadSignatureOk = "Подпись загружена";
    
    //menu 
    const titleMenuAcc = "Лицевой счет";

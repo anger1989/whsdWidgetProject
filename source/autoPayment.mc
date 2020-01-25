@@ -37,9 +37,9 @@ class AutoPayment extends Ui.View {
         dc.clear();
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-        dc.drawText(dc.getWidth()/2, dc.getHeight()/3.8, Graphics.FONT_SYSTEM_MEDIUM, ParamModule.titleCard+": "+_properties.baseCard , Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawText(dc.getWidth()/3, dc.getHeight()/2.5, Graphics.FONT_SYSTEM_MEDIUM, ParamModule.titleAutoPayAmount+": "+_properties.autoPayAmount , Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawText(dc.getWidth()/3, dc.getHeight()/1.8, Graphics.FONT_SYSTEM_MEDIUM, ParamModule.titleAutoPayThreshold+": "+_properties.autoPayBalanceThreshold , Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(dc.getWidth()/2, dc.getHeight()/3.8, Graphics.FONT_SYSTEM_MEDIUM, ParamModule.titleCard+": "+_properties.getBaseCard(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(dc.getWidth()/3, dc.getHeight()/2.5, Graphics.FONT_SYSTEM_MEDIUM, ParamModule.titleAutoPayAmount+": "+_properties.getAutoPayAmount() , Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(dc.getWidth()/3, dc.getHeight()/1.8, Graphics.FONT_SYSTEM_MEDIUM, ParamModule.titleAutoPayThreshold+": "+_properties.getAutoPayBalanceThreshold() , Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
 }

@@ -27,8 +27,7 @@ class HttpSpec {
    }
    
    function HTTP_REQUEST_METHOD_POST(params, method, url) {
-         urlOptions = {:method => 3, 
-                       "Content-Type" => Comm.HTTP_REQUEST_METHOD_POST, 
+         urlOptions = { "Content-Type" => Comm.HTTP_REQUEST_METHOD_POST, 
     	               "User-Agent" => apiUserAgent};
          getHttpRequest(url, params, urlOptions, method);  
    }

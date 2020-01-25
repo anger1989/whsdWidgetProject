@@ -44,29 +44,24 @@ class MenuDelegate extends Ui.MenuInputDelegate {
 
     
     function onMenuItem(item) {
-        var accInfoView = new TransponderInfo(__properties);
-        var autoPaymentView = new AutoPayment(__properties);
         var delegate = new InputDelegate();
         if ( item == :accInfo ) {
-             __getData.getAccountInfo(myapp.getProperty("apiToken"));
+             var accInfoView = new TransponderInfo(__properties);
              Ui.switchToView(accInfoView, delegate, Ui.SLIDE_LEFT);
         } else if ( item == :autoPay ) {
-             __getData.getAutoPaySettings(myapp.getProperty("apiToken"));
+             var autoPaymentView = new AutoPayment(__properties);
+             __getData.getAutoPaySettings();
              Ui.switchToView(autoPaymentView, delegate, Ui.SLIDE_LEFT);
             
         } else if ( item == :accPay) {
+             var _paymentView = new PaymentView(__properties, __getData);
              __getData.getCardQueryParams();
-             var cardQuery = myapp.getProperty("cardQueryParams");
-             System.println( myapp.getProperty("cardQueryParams"));
-             
-             var urlPart = cardQuery.substring(0, cardQuery.find("&_confirmdate"));
-             System.println(urlPart);
-             System.println( myapp.getProperty("cardQueryParams"));
-             __getData.postReplenish1(UrlDictionary.apiAutoPayUrl+urlPart);
-         //   Comm.openWebPage("https://mpaymentsso.nch-spb.com/to-replenish?"+myapp.getProperty("cardQueryParams")+"&pan=6362875000003730736&amount=100", null, null);
+             Ui.switchToView(_paymentView, delegate, Ui.SLIDE_LEFT); 
+             Comm.openWebPage("https://mpaymentsso.nch-spb.com/to-replenish?"+myapp.getProperty("cardQueryParams")+"&pan=6362875000003730736&amount=100", null, null);
             
         }
     }
+ 
 }
 
 class InputDelegate extends Ui.InputDelegate {
